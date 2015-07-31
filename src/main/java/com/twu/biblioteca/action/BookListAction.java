@@ -11,16 +11,18 @@ public class BookListAction extends ActionSupport{
     private  List<Book> bookList=null;
     @Override
     public String execute() throws Exception {
-        Book book1=new Book("clean code","sun",1990);
-        Book book2=new Book("refactor","sun",1990);
-        //List<Book> bookList={book1,book2};//没有这种写法！！！！
+        return SUCCESS;
+    }
+    public String initialDetails() throws Exception{
+        Book book1=new Book("clean code","Martin F",1990);
+        Book book2=new Book("refactor","Martin",1998);
+
         bookList=new ArrayList<Book>();
         bookList.add(book1);
         bookList.add(book2);
-
-        //System.out.println("Get book list");
         return SUCCESS;
     }
+
 
     public List<Book> getBookList() {
         return bookList;

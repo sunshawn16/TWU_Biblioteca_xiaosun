@@ -11,8 +11,7 @@
             <exception-mapping exception="java.lang.Exception" result="error"/>
         </global-exception-mappings>
 
-        <action name="getBookList" class="com.twu.biblioteca.action.BookListAction">
-            <!-- 定义三个逻辑视图和物理资源之间的映射 -->
+        <action name="getBookList" class="com.twu.biblioteca.action.BookListAction" method="initialDetails">
             <result >/bookList.jsp</result>
         </action>
     </package>
